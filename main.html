@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoN Random Loadout</title>
+    <script defer src="main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <div class="container-fluid text-center p-3 row justify-content-center" id="mainBox">
+        <div class="col-5"><img src="RoN_logo.png" class="img-fluid" height="100px"></div><div class="break"></div>
+
+        <div class="container col-7 text-center p-3 row justify-content-center border border-4 rounded-3" id="subBox">
+    
+            <div class="slot container row align-items-start col-10 border border-2 rounded-3"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasStartPrimary" role="button">
+                <div class="slotName">Primary</div>
+                <div class="slotSelect" id="primary"></div>
+            </div>
+            <div class="break"></div>
+
+            <div class="slot container row align-items-start col-5 border border-2 rounded-3"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasStartSecondary" role="button">
+                <div class="slotName">Secondary</div>
+                <div class="slotSelect" id="pistol"></div>
+            </div>
+            <div class="slot container row align-items-start col-5 border border-2 rounded-3"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasStartLongTac" role="button">
+                <div class="slotName">Long Tactical</div>
+                <div class="slotSelect" id="longTactical"></div>
+            </div>
+            <div class="break"></div>
+
+            <div class="slot container row align-items-start col-5 border border-2 rounded-3"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasStartBodyArmor" role="button">
+                <div class="slotName">Body Armor</div>
+                <div class="slotSelect" id="bodyArmor"></div>
+            </div>
+            <div class="slot container row align-items-start col-5 border border-2 rounded-3"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasStartArmorType" role="button">
+                <div class="slotName">Armor Type</div>
+                <div class="slotSelect" id="armorType"></div>
+            </div>
+            <div class="break"></div>
+
+            <div class="slot container row align-items-start col-5 border border-2 rounded-3"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasStartAmmo" role="button">
+                <div class="slotName">Ammo Type</div>
+                <div class="slotSelect" id="ammoType"></div>
+            </div>
+            <div class="slot container row align-items-start col-5 border border-2 rounded-3"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasStartGrenade" role="button">
+                <div class="slotName">Grenade</div>
+                <div class="slotSelect" id="grenade"></div>
+            </div>
+            <div class="break"></div>
+
+            <div class="slot container row align-items-start col-5 border border-2 rounded-3"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasStartDeployable" role="button">
+                <div class="slotName">Deployable</div>
+                <div class="slotSelect" id="deployable"></div>
+            </div>
+            <div class="slot container row align-items-start col-5 border border-2 rounded-3"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasStartHeadwear" role="button">
+                <div class="slotName">Head Gear</div>
+                <div class="slotSelect" id="headwear"></div>
+            </div>
+        </div>
+                            
+        <div class="col-12"><button id="random" class="btn btn-outline-danger"><i class="bi bi-shuffle"></i></button></div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStartPrimary" aria-labelledby="offcanvasStartPrimary">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasStart">Primary Weapons:</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>
+            <h5>ASSAULT RIFLES:</h5>
+            ARN-18<br>
+            ARWC<br>
+            <span class="supporter">MK1 Carbine</span> (Supporters Only)<br>
+            G36C<br>
+            GA416<br>
+            MK18<br>
+            SA-58<br>
+            MK16<br>
+            SLR47<br>
+            SR-16<br>
+            <br><h5>SUBMACHINE GUNS:</h5>
+            MP5/10mm<br>
+            MP5A2<br>
+            MP5A3<br>
+            MP7<br>
+            MP9<br>
+            MPX<br>
+            P90<br>
+            SPC<br>
+            UMP-45<br>
+            <br><h5>SHOTGUNS:</h5>
+            870 CQB<br>
+            B1301<br>
+            <span class="supporter">B1301 "Entryman"</span> (Supporters Only)<br>
+            M4 Super 90<br>
+            <br><h5>LAUNCHERS:</h5>
+            M32A1 Flash<br>
+            <br><h5>LESS THAN LEATHAL:</h5>
+            Beanbag Shotgun<br>
+            R7 Launcher<br>
+          </p></div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStartSecondary" aria-labelledby="offcanvasStartSecondary">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasStart">Secondary Weapons:</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>
+            .357 Magnum<br>
+            P92X<br>
+            57USG<br>
+            G19<br>
+            M45A1<br>
+            M11 Compact<br>
+            <span class="supporter">PC19</span> (Supporters Only)<br>
+            Taser<br>
+            USP45
+          </p></div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStartLongTac" aria-labelledby="offcanvasStartLongTac">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasStart">Long Tactical Options:</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>
+            Mirror Gun<br>
+            Breaching Shotgun<br>
+            Ballistic Shield<br>
+            Rescue Shield<br>
+            Battering Ram<br>
+            M320 Flash<br>
+            M320 Stinger<br>
+            M320 Gas<br>
+          </p></div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStartBodyArmor" aria-labelledby="offcanvasStartBodyArmor">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasStart">Body Armor Options:</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>
+            Anti-Stab Vest<br>
+            Light Armor<br>
+            Heavy Armor
+          </p></div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStartArmorType" aria-labelledby="offcanvasStartArmorType">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasStart">Armor Types:</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>
+            Kevlar<br>
+            Ceramic<br>
+            Steel
+          </p></div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStartAmmo" aria-labelledby="offcanvasStartAmmo">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasStart">Ammunition Types:</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>
+            JHP (Buckshot)<br>
+            AP  (Slug)<br><br>
+            Shotgun ammo in (parentheses)
+          </p></div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStartGrenade" aria-labelledby="offcanvasStartGrenade">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasStart">Grenade Options:</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>
+            Flashbang<br>
+            CS Gas<br>
+            Stinger
+          </p></div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStartDeployable" aria-labelledby="offcanvasStartDeployable">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasStart">Deployable Options:</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>
+            C2 Explosive<br>
+            Door Wedge<br>
+            Lockpick Gun<br>
+            Pepper Spray
+          </p></div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStartHeadwear" aria-labelledby="offcanvasStartHeadwear">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasStart">Headwear Options</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>
+            None<br>
+            NVG<br>
+            CBRN Mask<br>
+            Anti-Flash Goggles<br>
+            Ballistic Face Mask
+          </p></div>
+    </div>
+</body>
+</html>

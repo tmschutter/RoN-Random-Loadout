@@ -1,0 +1,40 @@
+.slotSelect {
+    height: 30px;
+    margin: auto;
+    color: red;
+}
+
+.slotName {
+    height: 30px;
+    margin: auto;
+}
+
+#random {
+    width: auto;
+    height: 42px;
+    margin-top: 15px;
+}
+
+.slot {
+    margin: 5px;
+}
+
+.break {
+    width: 100%;
+}
+
+#subBox {
+    width: 700px;
+}
+
+.supporter {
+    color: red;
+}
+
+body {
+    background-image: url("bg.png");
+    background-color: black;
+    background-position: right;
+    color: white;
+    background-repeat: no-repeat;
+}
